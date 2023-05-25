@@ -1,7 +1,12 @@
-//: [Previous](@previous)
+import UIKit
 
-import Foundation
 
-var greeting = "Hello, playground"
+let someVal:Double?
+someVal = 5.6324
 
-print(greeting)
+print(someVal)
+
+var str:String? = nil
+
+str = "Hello, World!"
+print(str)
