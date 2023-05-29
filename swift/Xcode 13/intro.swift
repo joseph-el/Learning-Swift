@@ -12,6 +12,11 @@ import SwiftUI
     #### HELPP
 */
 
+
+
+
+
+
 var Var: String = String("HELLO") // variable in String :
 
 let name:String = "Joseph" // const variable
@@ -21,6 +26,7 @@ let concat: String = name + Var;
 print("the += of Var and name is : \(concat)")
 
 name.isEmpty ? print("is empty") : print("is full")
+
 
 
 

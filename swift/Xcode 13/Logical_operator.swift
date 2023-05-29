@@ -1,5 +1,5 @@
 import SwiftUI
-
+import UniformTypeIdentifiers
 struct DEL {
 
     var NAME:String
@@ -44,7 +44,6 @@ if ret.Found() {
 }
 
 // if else
-
 if ret.Found() {
     print("Found")
 } else {
@@ -156,5 +155,9 @@ switch str {
         print("U")
     case "KILL" :
         print("USE")
-        
+    case "HELP", "S" :
+        print("SD")
+    default :
+        print("US")
 }
+
