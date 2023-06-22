@@ -4,6 +4,7 @@ Welcome to my repository! This readme provides a brief overview of Swift, SwiftU
 
 ## Swift
 
+
 Swift is a powerful and modern programming language developed by Apple. It is designed to be efficient, safe, and expressive. Swift is the primary language for developing applications on Apple platforms, including iOS, macOS, watchOS, and tvOS. Here are some key points about Swift:
 
 - Swift is easy to learn and has a clean syntax, making it approachable for beginners.
