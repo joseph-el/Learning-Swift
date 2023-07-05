@@ -22,10 +22,6 @@ struct s_tree
 };
 
 
-
-
-
-
 int main()
 
 {
