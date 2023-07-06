@@ -98,7 +98,8 @@ print(#"Write an interpolated string in Swift using \(multiplier)."#)
 // Prints "Write an interpolated string in Swift using \(multiplier)."
 
 
-print("-------------------------------------------------------------")
+var pipe:String = "-------------------------------------------------------------"
+print(pipe)
 
 var _string:String = "HELLO JOSEPH !"
 print("all is > \(_string.count)")
@@ -116,3 +117,89 @@ print("the number of characters in \(word) is \(word.count)")
 word += "\u{301}"    // COMBINING ACUTE ACCENT, U+0301
 print("the number of characters in \(word) is \(word.count)")
 // Prints "the number of characters in café is 4"
+
+// --- Accessing and Modifying a String ---
+
+// -| String Indices |- //
+let greeting: String = "Guten Tag!"
+var ty: Character = greeting[greeting.startIndex]
+var ly: Character = greeting[greeting.index(before: greeting.endIndex)]
+var sy: Character = greeting[greeting.index(after: greeting.startIndex)]
+let index: String.Index = greeting.index(greeting.startIndex, offsetBy: 7)
+var ind: Character = greeting[index]
+print(pipe)
+print(ty)
+print(ly)
+print(sy)
+print(ind)
+print(pipe)
+var ret: String = "HY JOSEPH ! 👋🏻"
+print("first index > \(ret.startIndex)")
+// print("C > ",  ret[ret.index(after: String.Index)]  )s
+print("C > ", ret[ret.index(after: ret.startIndex)])
+var indp :String.Index = ret.endIndex
+
+print("here the last chara > \(ret[ret.index(before: indp)])")
+print(pipe)
+
+do {
+    let lp : Character = ret [ret.index(ret.startIndex, offsetBy: 7)]  
+    print("check Character > |\(lp)|")
+}
+catch {
+    print("ERROR !")
+    
+}
+print(pipe)
+// Using loops
+
+var elem: DefaultIndices<String> = ret.indices
+
+for inddex: DefaultIndices<String>.Element in ret.indices {
+    print("", ret[inddex], terminator: "-")
+}
+
+// Inserting and Removing
+
+print(pipe);print("")
+print(pipe);print("")
+
+
+var wel: String = "hello"
+wel.insert(contentsOf: "HALA", at: wel.endIndex)
+
+print("str > ", wel)
+
+print(pipe)
+
+var welcome = "hello"
+welcome.insert("!", at: welcome.endIndex)
+
+
+welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
+
+welcome.remove(at: welcome.index(before: welcome.endIndex))
+
+let range: Range<String.Index> = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
+welcome.removeSubrange(range)
+print(welcome)
+
+print(pipe)
+print(pipe)
+print(pipe)
+
+var tyu: String = "!U😺Cat"
+
+for unicode_: String.UTF8View.Element in tyu.utf8 {
+    print(" ", unicode_ , terminator: " ")
+}
+print("")
+
+for uni: UInt16 in tyu.utf16 {
+    print(" ", uni, terminator: " ")
+}
+
+
+
+
+
